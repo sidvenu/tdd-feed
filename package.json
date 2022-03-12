@@ -1,0 +1,22 @@
+{
+  "name": "tdd-feed",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "repository": "https://github.com/sidvenu/tdd-feed",
+  "author": "siddharthvvenu@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint 'src/**'",
+    "format-check": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint": "^8.11.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "2.5.1",
+    "typescript": "^4.6.2"
+  }
+}
