@@ -1,5 +1,4 @@
 import express from "express";
-import * as http from "http";
 import pingRouter from "./routes/api/ping";
 import feedRouter from "./routes/api/feed";
 
