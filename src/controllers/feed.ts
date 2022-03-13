@@ -34,5 +34,5 @@ export const get = async (req: express.Request, res: express.Response) => {
       message: "Invalid values passed to paging parameters",
     });
   }
-  res.json(await service.getFeeds());
+  res.json(await service.getFeeds(feedsFetchOptions));
 };

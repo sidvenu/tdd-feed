@@ -179,10 +179,10 @@ describe("Service - Feed", () => {
     });
     expect(feedsSecondPage).to.have.length(50);
     expect(feedsSecondPage[0].name).to.equal("Test Name 51");
-    expect(feedsFirstPage[49].name).to.equal("Test Name 100");
+    expect(feedsSecondPage[49].name).to.equal("Test Name 100");
 
     const feedsThirdPage = await feedService.getFeeds({
-      currentPage: 2,
+      currentPage: 3,
     });
     expect(feedsThirdPage).to.have.length(20);
     expect(feedsThirdPage[0].name).to.equal("Test Name 101");

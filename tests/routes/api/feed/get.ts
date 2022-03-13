@@ -29,7 +29,7 @@ describe("Route api/feed", () => {
   });
   it("Get Feeds with page size 10 and current page 2", async () => {
     const res = await fetch(
-      `http://localhost:${expressPort}/api/feed?pageSize=20`
+      `http://localhost:${expressPort}/api/feed?pageSize=10&currentPage=2`
     );
     expect(res.status).to.equal(200);
     const body = await res.json();
