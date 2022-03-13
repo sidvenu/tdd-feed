@@ -6,10 +6,10 @@
   "author": "siddharthvvenu@gmail.com",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint 'src/**'",
+    "lint": "eslint 'src/**' 'tests/**'",
     "format-check": "prettier --check .",
     "format": "prettier --write .",
-    "test": "mocha -r ts-node/register 'tests/**/*.ts'"
+    "test": "mocha 'tests/**/*.ts'"
   },
   "devDependencies": {
     "@types/chai": "^4.3.0",

@@ -1,8 +1,5 @@
 import { expect } from "chai";
-import {
-  session as expressSession,
-  port as expressPort,
-} from "../../../../src/index";
+import { port as expressPort } from "../../../../src/index";
 require("isomorphic-fetch");
 
 describe("Route api/ping", () => {
@@ -12,8 +9,5 @@ describe("Route api/ping", () => {
     const body = await res.json();
     expect(body).to.have.property("message");
     expect((body as { message: unknown }).message).to.equal("Pong!");
-  });
-  after(() => {
-    expressSession.close();
   });
 });
