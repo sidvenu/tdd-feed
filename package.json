@@ -9,7 +9,9 @@
     "lint": "eslint 'src/**' 'tests/**'",
     "format-check": "prettier --check .",
     "format": "prettier --write .",
-    "test": "mocha 'tests/**/*.ts'"
+    "test": "mocha 'tests/**/*.ts'",
+    "dev": "node -r ts-node/register lib/index.js",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/chai": "^4.3.0",

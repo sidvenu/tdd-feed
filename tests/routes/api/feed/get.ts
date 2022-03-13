@@ -7,10 +7,13 @@ describe("Route api/feed", () => {
     const res = await fetch(`http://localhost:${expressPort}/api/feed`);
     expect(res.status).to.equal(200);
     const body = await res.json();
-    expect(body).to.be.an("array");
-    expect(body).to.have.length(50);
-    expect(body[0]).to.have.property("name");
-    expect((body[0] as { name: string }).name).to.equal(
+    expect(body.currentPage).to.equal(1);
+    expect(body.pageSize).to.equal(50);
+    expect(body.resultSize).to.equal(50);
+    expect(body.feeds).to.be.an("array");
+    expect(body.feeds).to.have.length(50);
+    expect(body.feeds[0]).to.have.property("name");
+    expect((body.feeds[0] as { name: string }).name).to.equal(
       "Customer Assurance Liaison"
     );
   });
@@ -20,10 +23,13 @@ describe("Route api/feed", () => {
     );
     expect(res.status).to.equal(200);
     const body = await res.json();
-    expect(body).to.be.an("array");
-    expect(body).to.have.length(20);
-    expect(body[0]).to.have.property("name");
-    expect((body[0] as { name: string }).name).to.equal(
+    expect(body.currentPage).to.equal(1);
+    expect(body.pageSize).to.equal(20);
+    expect(body.resultSize).to.equal(20);
+    expect(body.feeds).to.be.an("array");
+    expect(body.feeds).to.have.length(20);
+    expect(body.feeds[0]).to.have.property("name");
+    expect((body.feeds[0] as { name: string }).name).to.equal(
       "Customer Assurance Liaison"
     );
   });
@@ -33,10 +39,13 @@ describe("Route api/feed", () => {
     );
     expect(res.status).to.equal(200);
     const body = await res.json();
-    expect(body).to.be.an("array");
-    expect(body).to.have.length(10);
-    expect(body[0]).to.have.property("name");
-    expect((body[0] as { name: string }).name).to.equal(
+    expect(body.currentPage).to.equal(2);
+    expect(body.pageSize).to.equal(10);
+    expect(body.resultSize).to.equal(10);
+    expect(body.feeds).to.be.an("array");
+    expect(body.feeds).to.have.length(10);
+    expect(body.feeds[0]).to.have.property("name");
+    expect((body.feeds[0] as { name: string }).name).to.equal(
       "Regional Intranet Developer"
     );
   });

@@ -16,7 +16,11 @@ export const get = async (req: express.Request, res: express.Response) => {
       });
     }
     feedsFetchOptions.sort = {
-      columnName: req.query.sortColumnName as string,
+      columnName: req.query.sortColumnName as
+        | "name"
+        | "image"
+        | "description"
+        | "dateLastEdited",
       ascending: req.query.sortAscending === "true",
     };
   }
